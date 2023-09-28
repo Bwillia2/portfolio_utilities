@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 """
 backBlazeUploader.py
@@ -10,11 +9,11 @@ import os
 import hashlib
 from b2sdk.v1 import InMemoryAccountInfo, B2Api
 
-# Constants
-CDN_BASE_URL = os.environ.get('CDN_BASE_URL')  # Fetch from environment variable
-APPLICATION_KEY = os.environ.get('B2_APPLICATION_KEY')  # Fetch from environment variable
-APPLICATION_KEY_ID = os.environ.get('B2_APPLICATION_KEY_ID')  # Fetch from environment variable
-BUCKET_NAME = os.environ.get('B2_BUCKET_NAME')  # Fetch from environment variable
+# Constants to be fetched from environment variables
+CDN_BASE_URL = os.environ.get('CDN_BASE_URL')
+APPLICATION_KEY = os.environ.get('B2_APPLICATION_KEY')
+APPLICATION_KEY_ID = os.environ.get('B2_APPLICATION_KEY_ID')
+BUCKET_NAME = os.environ.get('B2_BUCKET_NAME')
 
 def calculate_md5(file_path):
     """
